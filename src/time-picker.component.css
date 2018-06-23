@@ -1,0 +1,33 @@
+:host{
+    display: inline-block;
+}
+#container{
+    position: relative;
+}
+#input_box{
+    outline: none;
+    box-sizing: border-box;
+    padding: 0 3px;
+}
+#panel{
+    position: absolute;
+    width: 400px;
+    background-color: white;
+    box-shadow: 0 2px 8px 4px rgba(0,0,0,0.2);
+    z-index: 2000;
+}
+.title{
+    text-align: center;
+}
+.item{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.item:hover, .item.selected{
+    background-color: #0b7dd8;
+    color: white;
+}

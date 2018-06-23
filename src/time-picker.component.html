@@ -1,0 +1,23 @@
+<div id="container">
+    <input id="input_box" readonly
+           [(ngModel)]="_value"
+           [ngStyle]="{'width.px': inputWidth, 'height.px': inputHeight}"
+           (click)="onInputClick($event)"
+           (focus)="onInputFocus($event)"
+           (blur)="onInputBlur()">
+
+    <div id="panel" *ngIf="showBox">
+        <div class="ui-g">
+            <div class="ui-g-4 title">小时</div>
+            <div class="ui-g-8 title">分钟</div>
+        </div>
+        <div class="ui-g">
+            <div class="ui-g-4">
+                <span class="item" *ngFor="let hour of hours" [ngClass]="{'selected': hour == selectedHour}" (click)="onHourClick(hour, $event)">{{hour}}</span>
+            </div>
+            <div class="ui-g-8">
+                <span class="item" *ngFor="let minute of minutes" [ngClass]="{'selected': minute == selectedMinute}" (click)="onMinuteClick(minute, $event)">{{minute}}</span>
+            </div>
+        </div>
+    </div>
+</div>
